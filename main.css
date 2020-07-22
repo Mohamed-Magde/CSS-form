@@ -1,0 +1,539 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+  color: #777;
+  background-color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container {
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+  height: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e8eaeb;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .container .form {
+  padding: 2em;
+  background-color: #fff;
+  width: 70%;
+  height: 60%;
+  margin: 0 auto;
+  border-radius: 5px;
+  z-index: 111;
+  -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .container .form-btn {
+  padding: 0.5em 1.5em;
+  background-color: #fff;
+  color: #f25a76;
+  border: 1px solid #f25a76;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.wrapper .container .form-btn:hover {
+  background-color: #f25a76;
+  color: #fff;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .container .form-btn:focus {
+  outline: none;
+}
+
+.wrapper .container .form .output {
+  height: 20%;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container .form .output #total {
+  margin-right: 2em;
+  color: #fff;
+  background-color: #fdb700;
+  border-radius: 5px;
+}
+
+.wrapper .container .form .output #vat {
+  margin-right: 2em;
+  color: #fff;
+  background-color: #c567d2;
+  border-radius: 5px;
+}
+
+.wrapper .container .form .output #grand {
+  color: #fff;
+  background-color: #03b7aa;
+  border-radius: 5px;
+}
+
+.wrapper .container .form input {
+  width: 80%;
+  height: 3em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .container .form ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 1rem;
+}
+
+.wrapper .container .circle-1 {
+  width: 17em;
+  height: 17em;
+  border-radius: 50%;
+  background-color: #f25a76;
+  position: absolute;
+  z-index: 11;
+  left: 3%;
+  top: 10%;
+}
+
+.wrapper .container .circle-2 {
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  background-color: #fdb700;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+}
+
+.wrapper .container .circle-3 {
+  background-color: #c567d2;
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  position: absolute;
+  right: -15%;
+  bottom: -15%;
+}
+
+.wrapper .container .circle-4 {
+  background-color: #03b7aa;
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  position: absolute;
+  right: 40%;
+  bottom: 10%;
+}
+
+.heading-1 {
+  font-weight: 100;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+.heading-1::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 0.05em;
+  border-radius: 10px;
+  background-color: #f25a76;
+  left: 0;
+  bottom: -10%;
+}
+
+.counter {
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.counter p {
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 90%;
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .container {
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #e8eaeb;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper .container .form {
+    padding: 2em;
+    background-color: #fff;
+    width: 70%;
+    height: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    z-index: 111;
+    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper .container .form-btn {
+    padding: 0.5em 1.5em;
+    background-color: #fff;
+    color: #f25a76;
+    border: 1px solid #f25a76;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 5px;
+  }
+  .wrapper .container .form-btn:hover {
+    background-color: #f25a76;
+    color: #fff;
+    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper .container .form-btn:focus {
+    outline: none;
+  }
+  .wrapper .container .form .output {
+    height: 20%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .container .form .output #total {
+    margin-right: 1em;
+    color: #fff;
+    background-color: #fdb700;
+    border-radius: 5px;
+  }
+  .wrapper .container .form .output #vat {
+    margin-right: 1em;
+    color: #fff;
+    background-color: #c567d2;
+    border-radius: 5px;
+  }
+  .wrapper .container .form .output #grand {
+    color: #fff;
+    background-color: #03b7aa;
+    border-radius: 5px;
+  }
+  .wrapper .container .form input {
+    width: 80%;
+    height: 3em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding-left: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .container .form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 1.5rem;
+  }
+  .wrapper .container .circle-1 {
+    width: 17em;
+    height: 17em;
+    border-radius: 50%;
+    background-color: #f25a76;
+    position: absolute;
+    z-index: 11;
+    left: 3%;
+    top: 10%;
+  }
+  .wrapper .container .circle-2 {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: #fdb700;
+    position: absolute;
+    left: 40%;
+    top: 14%;
+  }
+  .wrapper .container .circle-3 {
+    background-color: #c567d2;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    position: absolute;
+    right: -15%;
+    bottom: -15%;
+  }
+  .wrapper .container .circle-4 {
+    background-color: #03b7aa;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    position: absolute;
+    right: 40%;
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .container {
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #e8eaeb;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper .container .form {
+    padding: 2em;
+    background-color: #fff;
+    width: 70%;
+    height: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    z-index: 111;
+    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper .container .form-btn {
+    padding: 0.5em 1.5em;
+    background-color: #fff;
+    color: #f25a76;
+    border: 1px solid #f25a76;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 5px;
+  }
+  .wrapper .container .form-btn:hover {
+    background-color: #f25a76;
+    color: #fff;
+    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper .container .form-btn:focus {
+    outline: none;
+  }
+  .wrapper .container .form .output {
+    height: 20%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .container .form .output #total {
+    margin-right: 1em;
+    color: #fff;
+    background-color: #fdb700;
+    border-radius: 5px;
+  }
+  .wrapper .container .form .output #vat {
+    margin-right: 1em;
+    color: #fff;
+    background-color: #c567d2;
+    border-radius: 5px;
+  }
+  .wrapper .container .form .output #grand {
+    color: #fff;
+    background-color: #03b7aa;
+    border-radius: 5px;
+  }
+  .wrapper .container .form input {
+    width: 80%;
+    height: 2em;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .container .form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 1rem;
+  }
+  .wrapper .container .circle-1 {
+    width: 17em;
+    height: 17em;
+    border-radius: 50%;
+    background-color: #f25a76;
+    position: absolute;
+    z-index: 11;
+    left: 3%;
+    top: 10%;
+  }
+  .wrapper .container .circle-2 {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: #fdb700;
+    position: absolute;
+    left: 40%;
+    top: 14%;
+  }
+  .wrapper .container .circle-3 {
+    background-color: #c567d2;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    position: absolute;
+    right: -15%;
+    bottom: -15%;
+  }
+  .wrapper .container .circle-4 {
+    background-color: #03b7aa;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    position: absolute;
+    right: 40%;
+    bottom: 10%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

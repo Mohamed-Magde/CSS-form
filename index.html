@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form action="" class="form" id="form">
+          <div class="form-title">
+            <h1 class="heading-1">Add Numbers</h1>
+          </div>
+          <!-- price -->
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Price : "
+              required="true"
+              name="price"
+              id="price"
+              autocomplete="off"
+            />
+          </div>
+          <!-- quantity -->
+          <div class="form-group">
+            <input
+              required="true"
+              placeholder="Quantity : "
+              type="text"
+              id="quantity"
+              name="quantity"
+              autocomplete="off"
+            />
+          </div>
+          <div class="output">
+            <div class="counter" id="total"></div>
+            <div class="counter" id="vat"></div>
+            <div class="counter" id="grand"></div>
+          </div>
+          <!-- Submit -->
+          <div class="form-group">
+            <button class="form-btn" type="submit" id="btn-submit">
+              Submit
+            </button>
+          </div>
+        </form>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
